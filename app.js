@@ -16,14 +16,14 @@ function getComputerChoice() {
     return choose;
 }
 
-//Write a function that plays a single round of Rock Paper Scissors. The function should take two parameters
+//Write a function that plays a single round of Rock Paper Scissors. The function take two parameters
 function playRound(playerSelection, computerSelection) {
     console.log("player chose " + playerSelection + " Computer chose " + computerSelection);
 
-
+    
 }
 
-//create a prompt for player to enter
-const playerSelection = prompt("enter rock paper or scissor");
+//create a prompt for player to enter and made input to case insensitive
+const playerSelection = prompt("enter rock paper or scissor").toLowerCase();
 const computerSelection = getComputerChoice();
 playRound(playerSelection, computerSelection);
