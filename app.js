@@ -46,8 +46,15 @@ function game() {
     for (let i = 0; i < 5; i++) {
         //created a prompt for player to enter and made input to case insensitive
         const playerSelection = prompt("enter rock paper or scissor").toLowerCase();
-        const computerSelection = getComputerChoice();
-        playRound(playerSelection, computerSelection);
+
+        //if statement for input not equivalent to rock paper scissor
+        if (playerSelection !== "rock" && playerSelection !== "paper" && playerSelection !== "scissor") {
+            console.log("please enter rock paper scissor");
+        } else {
+            const computerSelection = getComputerChoice();
+            playRound(playerSelection, computerSelection);
+        }
+
     }
     //show score numbers
     console.log(" player score: " + player + "\n computer score: " + computer + "\n draw: " + draw + "\n you lose!");
