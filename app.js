@@ -16,11 +16,21 @@ function getComputerChoice() {
     return choose;
 }
 
-//Write a function that plays a single round of Rock Paper Scissors. The function take two parameters
+//function that plays a single round of Rock Paper Scissors. The function have two parameters
 function playRound(playerSelection, computerSelection) {
     console.log("player chose " + playerSelection + " Computer chose " + computerSelection);
 
-    
+    if(playerSelection==="paper" && computerSelection==="rock"){
+        console.log("you win!");
+    }else if(playerSelection==="scissor"&& computerSelection==="paper"){
+        console.log("you win!");
+    }else if(playerSelection==="rock"&& computerSelection==="scissor"){
+        console.log("you win!");
+    }else if(playerSelection===computerSelection){
+        console.log("its a draw!");
+    }else{
+        console.log("you lose!");
+    }
 }
 
 //create a prompt for player to enter and made input to case insensitive
